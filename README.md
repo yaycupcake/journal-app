@@ -183,20 +183,20 @@ src
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Database models     |    H     |     2 hrs      |     40m     |     TBD     |
-| Controllers (CRUD)  |    H     |     5 hrs      |     1h 15m     |     TBD     |
+| Controllers (CRUD)  |    H     |     5 hrs      |     1h 35m     |     TBD     |
 | Routing (backend)   |    H     |     3 hrs      |     20m     |     TBD     |
 | Seed data           |    M     |     1.5 hrs    |     35m     |     TBD     |
-| Authentication      |    H     |     5 hrs      |     30m     |     TBD     |
-| Connect rails/react |    H     |     4 hrs      |     45m     |     TBD     |
-| Component creation  |    H     |     3 hrs      |     50m     |     TBD     |
-| State and methods   |    H     |     3 hrs      |     48m     |     TBD     |
-| React router        |    M     |     1.5 hrs    |     30m     |     TBD     |
+| Authentication      |    H     |     5 hrs      |     45m     |     TBD     |
+| Connect rails/react |    H     |     4 hrs      |     50m     |     TBD     |
+| Component creation  |    H     |     3 hrs      |     1h 20m     |     TBD     |
+| State and methods   |    H     |     3 hrs      |     1h 20m     |     TBD     |
+| React router        |    M     |     1.5 hrs    |     35m     |     TBD     |
 | Basic CSS           |    L     |     1.5 hrs    |     1m     |     TBD     |
 | Mobile layout       |    M     |     1 hrs      |     _ hrs     |     TBD     |
 | Tablet layout       |    M     |     1 hrs      |     _ hrs     |     TBD     |
 | Desktop layout      |    M     |     1 hrs      |     _ hrs     |     TBD     |
 | Code cleanup        |    M     |     0.5 hrs    |     1m     |     TBD     |
-| TROUBLESHOOTING     |    H     |     7 hrs      |     1h 10m     |     TBD     |
+| TROUBLESHOOTING     |    H     |     7 hrs      |     1h 15m     |     TBD     |
 | TOTAL               |          |     40 hrs     |     _ hrs     |     TBD     |
 
 <br>

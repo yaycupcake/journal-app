@@ -2,6 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import Posts from '../Posts'
 import Post from '../Post'
+import Login from '../Login'
 
 export default function Main(props) {
  return (
@@ -13,7 +14,14 @@ export default function Main(props) {
     />
    </Route>
    <Route exact path='/post/:id'>
-    <Post />
+    <Post
+     currentUser={props.currentUser}
+    />
+   </Route>
+   <Route exact path='/login'>
+    <Login
+     handleLoginSubmit={props.handleLoginSubmit}
+    />
    </Route>
   </main>
  )

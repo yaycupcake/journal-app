@@ -5,7 +5,8 @@ import { createComment } from '../services/comments'
 class Post extends Component {
 
  state = {
-  post: null
+  post: null,
+  comment: ""
  }
 
  componentDidMount() {
@@ -16,6 +17,20 @@ class Post extends Component {
   const { id } = this.props.match.params
   const post = await getOnePost(id)
   this.setState({ post })
+ }
+
+ handleChange = (e) => {
+  const { name, value } = e.target;
+  this.setState({
+   [name]: value
+  })
+ }
+
+ handleSubmit = async (e) => {
+  e.preventDefault()
+  const commentData = this.state.comment
+  await createComment(commentData)
+  this.setState({ comment: "" })
  }
 
  render() {
@@ -41,15 +56,16 @@ class Post extends Component {
       ))}
 
 
-      <form onSubmit={() => { }}>
+      <form onSubmit={this.handleSubmit}>
 
-
-
+       <textarea name="comment" onChange={this.handleChange} value={this.state.comment} />
+       <button>Post Comment</button>
 
       </form>
 
-
-
+      {/* change the form to show only if logged in */}
+      {/* also break out this whole comment thing
+      into its own component */}
 
      </>
 

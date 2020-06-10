@@ -7,9 +7,15 @@ export default function Layout(props) {
  return (
   <div>
    <Header />
-   <Nav />
+   <Nav
+    currentUser={props.currentUser}
+    handleLogout={props.handleLogout}
+   />
    <Main
     posts={props.posts}
+    currentUser={props.currentUser}
+    handleLoginSubmit={props.handleLoginSubmit}
+    handleRegisterSubmit={props.handleRegisterSubmit}
    />
   </div>
  )

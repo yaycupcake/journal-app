@@ -4,9 +4,9 @@ export default function Posts(props) {
  return (
   <div className="Posts">
 
-   {props.posts && props.posts.map(post => (
+   {props.posts && props.posts.map((post, id) => (
 
-    <Link to={`/post/${post.id}`} >
+    <Link to={`/post/${post.id}`} key={id}>
      <div>
 
       <p>{post.title}</p>
