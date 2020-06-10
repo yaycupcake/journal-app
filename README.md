@@ -173,8 +173,8 @@ src
 |SignUp| functional |   n   |   y   | _Create a new user._ |
 |NewPost| functional |   n   |   y   | _Create a new post._ |
 |EditPost| functional |   n   |   y   | _Lets you edit a given post._ |
-|Posts| functional |   n   |   n   | _Shows a list of all posts._ |
-|Post| functional |   n   |   n   | _Shows a post's details, as well as its comments._ |
+|Posts| functional |   n   |   y   | _Shows a list of all posts._ |
+|Post| class |   y   |   n   | _Shows a post's details, as well as its comments._ |
 |Comments| functional |   n   |   y   | _Shows multiple `Comment` components and lets you add a comment._ |
 |Comment| functional |   n   |   n   | _Shows an individual comment._ |
 
@@ -188,15 +188,15 @@ src
 | Seed data           |    M     |     1.5 hrs    |     35m     |     TBD     |
 | Authentication      |    H     |     5 hrs      |     30m     |     TBD     |
 | Connect rails/react |    H     |     4 hrs      |     45m     |     TBD     |
-| Component creation  |    H     |     3 hrs      |     6m     |     TBD     |
-| State and methods   |    H     |     3 hrs      |     _ hrs     |     TBD     |
-| React router        |    M     |     1.5 hrs    |     5m     |     TBD     |
+| Component creation  |    H     |     3 hrs      |     50m     |     TBD     |
+| State and methods   |    H     |     3 hrs      |     48m     |     TBD     |
+| React router        |    M     |     1.5 hrs    |     30m     |     TBD     |
 | Basic CSS           |    L     |     1.5 hrs    |     1m     |     TBD     |
 | Mobile layout       |    M     |     1 hrs      |     _ hrs     |     TBD     |
 | Tablet layout       |    M     |     1 hrs      |     _ hrs     |     TBD     |
 | Desktop layout      |    M     |     1 hrs      |     _ hrs     |     TBD     |
 | Code cleanup        |    M     |     0.5 hrs    |     1m     |     TBD     |
-| TROUBLESHOOTING     |    H     |     7 hrs      |     1 hrs     |     TBD     |
+| TROUBLESHOOTING     |    H     |     7 hrs      |     1h 10m     |     TBD     |
 | TOTAL               |          |     40 hrs     |     _ hrs     |     TBD     |
 
 <br>
