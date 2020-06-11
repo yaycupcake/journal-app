@@ -48,7 +48,16 @@ class Post extends Component {
 
       <p>{this.state.post.content}</p>
 
-      <Link to={`/post/${this.props.match.params.id}/edit`}>edit</Link>
+      {/* prob create a nested ternary/guard here to display the edit/delete buttons only if logged in and is the creator of the post */}
+
+
+      {this.props.currentUser.id === this.state.post.user.id
+       &&
+       <>
+        <Link to={`/post/${this.props.match.params.id}/edit`}>edit</Link>
+        <Link to='#'>Delete</Link>
+       </>
+      }
 
       <hr />
       <h3>Comments:</h3>

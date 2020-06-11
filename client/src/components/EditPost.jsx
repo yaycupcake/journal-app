@@ -56,24 +56,29 @@ class EditPost extends Component {
   return (
    <div>
 
+
     {this.state.post
      ?
-     <>
-      <form onSubmit={this.handleSubmit}>
-       <input
-        type="text"
-        name="title"
-        value={this.state.title}
-        onChange={this.handleChange}
-       />
-       <textarea
-        name="content"
-        value={this.state.content}
-        onChange={this.handleChange}
-       />
-       <button>GO</button>
-      </form>
-     </>
+     this.props.currentUser.id === this.state.post.user.id
+      ?
+      <>
+       <form onSubmit={this.handleSubmit}>
+        <input
+         type="text"
+         name="title"
+         value={this.state.title}
+         onChange={this.handleChange}
+        />
+        <textarea
+         name="content"
+         value={this.state.content}
+         onChange={this.handleChange}
+        />
+        <button>GO</button>
+       </form>
+      </>
+      :
+      <h2>You can't edit someone else's post!</h2>
      :
      <h2>Sorry, that post was not found.</h2>
     }
