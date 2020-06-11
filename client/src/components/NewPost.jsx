@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { createPost } from '../services/posts'
+import { withRouter } from 'react-router-dom'
 
-export default class NewPost extends Component {
+class NewPost extends Component {
  state = {
   title: '',
   content: ''
@@ -20,11 +21,10 @@ export default class NewPost extends Component {
   const title = this.state.title
   const content = this.state.content
   const postData = { title: title, content: content }
-  console.log(postData);
-
   await createPost(postData)
   this.setState({ title: "" })
   this.setState({ content: "" })
+  this.props.history.push('/')
  }
 
 
@@ -54,3 +54,5 @@ export default class NewPost extends Component {
   )
  }
 }
+
+export default withRouter(NewPost)

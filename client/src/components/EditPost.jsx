@@ -4,12 +4,6 @@ import { withRouter } from 'react-router-dom'
 import { updatePost } from '../services/posts'
 class EditPost extends Component {
 
- //eventually need to add conditional logic
- //so that only the post creator can edit
- //and also on the post page that they
- //are the only one who can even click and see
- //the edit link to get to this page
-
  state = {
   post: null,
   title: '',
@@ -56,7 +50,6 @@ class EditPost extends Component {
   return (
    <div>
 
-
     {this.state.post
      ?
      this.props.currentUser.id === this.state.post.user.id
@@ -79,10 +72,12 @@ class EditPost extends Component {
       </>
       :
       <h2>You can't edit someone else's post!</h2>
+     // There shouldn't actually be a way to see this error
+     // just from navigating the site normally
+     // however it is there in case a user types in the URL.
      :
      <h2>Sorry, that post was not found.</h2>
     }
-
 
    </div>
   )

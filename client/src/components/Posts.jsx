@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+
 export default function Posts(props) {
+ const { getPostList } = props
  useEffect(() => {
-  props.getPostList()
- }, [])
+  getPostList()
+ })
 
  return (
   <div className="Posts">

@@ -188,9 +188,9 @@ src
 | Seed data           |    M     |     1.5 hrs    |     35m     |     TBD     |
 | Authentication      |    H     |     5 hrs      |     45m     |     TBD     |
 | Connect rails/react |    H     |     4 hrs      |     1h 10m     |     TBD     |
-| Component creation  |    H     |     3 hrs      |     2h 5m     |     TBD     |
-| State and methods   |    H     |     3 hrs      |     2h 40m     |     TBD     |
-| React router        |    M     |     1.5 hrs    |     1h     |     TBD     |
+| Component creation  |    H     |     3 hrs      |     2h 7m     |     TBD     |
+| State and methods   |    H     |     3 hrs      |     2h 47m     |     TBD     |
+| React router        |    M     |     1.5 hrs    |     1h 15m     |     TBD     |
 | Basic CSS           |    L     |     1.5 hrs    |     1m     |     TBD     |
 | Mobile layout       |    M     |     1 hrs      |     _ hrs     |     TBD     |
 | Tablet layout       |    M     |     1 hrs      |     _ hrs     |     TBD     |
