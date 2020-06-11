@@ -11,6 +11,7 @@ export default class App extends Component {
  }
 
  componentDidMount() {
+  this.handleVerify()
   this.getPostList()
  }
 

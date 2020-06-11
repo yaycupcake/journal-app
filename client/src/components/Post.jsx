@@ -28,8 +28,13 @@ class Post extends Component {
 
  handleSubmit = async (e) => {
   e.preventDefault()
+  const { id } = this.props.match.params
+  console.log(id);
+
   const commentData = this.state.comment
-  await createComment(commentData)
+  console.log(commentData);
+
+  await createComment(commentData, id)
   this.setState({ comment: "" })
  }
 
