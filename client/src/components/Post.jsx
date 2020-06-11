@@ -56,6 +56,7 @@ class Post extends Component {
        <>
         <Link to={`/post/${this.props.match.params.id}/edit`}>edit</Link>
         <Link to='#'>Delete</Link>
+        {/* NEED TO ACTUALLY IMPLEMENT DELETE FUNCTIONALITY */}
        </>
       }
 

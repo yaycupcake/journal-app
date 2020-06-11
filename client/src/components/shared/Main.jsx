@@ -5,6 +5,7 @@ import Post from '../Post'
 import Login from '../Login'
 import NewPost from '../NewPost'
 import EditPost from '../EditPost'
+import SignUp from '../SignUp'
 
 export default function Main(props) {
 
@@ -29,6 +30,11 @@ export default function Main(props) {
    <Route exact path='/login'>
     <Login
      handleLoginSubmit={props.handleLoginSubmit}
+    />
+   </Route>
+   <Route exact path='/sign-up'>
+    <SignUp
+     handleRegisterSubmit={props.handleRegisterSubmit}
     />
    </Route>
    <Route exact path='/new-post'>
