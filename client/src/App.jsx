@@ -53,6 +53,7 @@ export default class App extends Component {
      handleLoginSubmit={this.handleLoginSubmit}
      handleRegisterSubmit={this.handleRegisterSubmit}
      handleLogout={this.handleLogout}
+     getPostList={this.getPostList}
     />
    </>
   )

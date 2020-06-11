@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { getOnePost } from '../services/posts'
 import { withRouter } from 'react-router-dom'
 import { createComment } from '../services/comments'
+import { Link } from 'react-router-dom'
 class Post extends Component {
 
  state = {
@@ -29,10 +30,7 @@ class Post extends Component {
  handleSubmit = async (e) => {
   e.preventDefault()
   const { id } = this.props.match.params
-  console.log(id);
-
   const commentData = this.state.comment
-  console.log(commentData);
 
   await createComment(commentData, id)
   this.setState({ comment: "" })
@@ -49,6 +47,17 @@ class Post extends Component {
       <p>by: {this.state.post.user.username}</p>
 
       <p>{this.state.post.content}</p>
+
+      {/* prob create a nested ternary/guard here to display the edit/delete buttons only if logged in and is the creator of the post */}
+
+
+      {this.props.currentUser.id === this.state.post.user.id
+       &&
+       <>
+        <Link to={`/post/${this.props.match.params.id}/edit`}>edit</Link>
+        <Link to='#'>Delete</Link>
+       </>
+      }
 
       <hr />
       <h3>Comments:</h3>

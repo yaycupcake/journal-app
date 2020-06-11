@@ -16,6 +16,7 @@ export default function Layout(props) {
     currentUser={props.currentUser}
     handleLoginSubmit={props.handleLoginSubmit}
     handleRegisterSubmit={props.handleRegisterSubmit}
+    getPostList={props.getPostList}
    />
   </div>
  )
