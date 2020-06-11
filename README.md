@@ -187,10 +187,10 @@ src
 | Routing (backend)   |    H     |     3 hrs      |     20m     |     TBD     |
 | Seed data           |    M     |     1.5 hrs    |     35m     |     TBD     |
 | Authentication      |    H     |     5 hrs      |     45m     |     TBD     |
-| Connect rails/react |    H     |     4 hrs      |     1h 5m     |     TBD     |
-| Component creation  |    H     |     3 hrs      |     1h 45m     |     TBD     |
-| State and methods   |    H     |     3 hrs      |     2h 13m     |     TBD     |
-| React router        |    M     |     1.5 hrs    |     49m     |     TBD     |
+| Connect rails/react |    H     |     4 hrs      |     1h 10m     |     TBD     |
+| Component creation  |    H     |     3 hrs      |     2h 5m     |     TBD     |
+| State and methods   |    H     |     3 hrs      |     2h 40m     |     TBD     |
+| React router        |    M     |     1.5 hrs    |     1h     |     TBD     |
 | Basic CSS           |    L     |     1.5 hrs    |     1m     |     TBD     |
 | Mobile layout       |    M     |     1 hrs      |     _ hrs     |     TBD     |
 | Tablet layout       |    M     |     1 hrs      |     _ hrs     |     TBD     |

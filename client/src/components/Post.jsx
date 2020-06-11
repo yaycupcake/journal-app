@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getOnePost } from '../services/posts'
+import { getOnePost, deletePost } from '../services/posts'
 import { withRouter } from 'react-router-dom'
 import { createComment } from '../services/comments'
 import { Link } from 'react-router-dom'
@@ -36,6 +36,14 @@ class Post extends Component {
   this.setState({ comment: "" })
  }
 
+ handleDelete = async (e) => {
+  e.preventDefault()
+  //maybe add an alert/warning later idk
+  const { id } = this.props.match.params
+  await deletePost(id)
+  //prob add a redirect home here
+ }
+
  render() {
   return (
    <div>
@@ -54,8 +62,8 @@ class Post extends Component {
       {this.props.currentUser.id === this.state.post.user.id
        &&
        <>
-        <Link to={`/post/${this.props.match.params.id}/edit`}>edit</Link>
-        <Link to='#'>Delete</Link>
+        <Link to={`/post/${this.props.match.params.id}/edit`}>Edit</Link>
+        <Link to='#' onClick={this.handleDelete}>Delete</Link>
         {/* NEED TO ACTUALLY IMPLEMENT DELETE FUNCTIONALITY */}
        </>
       }
@@ -92,6 +100,7 @@ class Post extends Component {
 
      :
      <h2>Sorry, that post was not found.</h2>
+     // not to self, add a link to return home as well here
     }
 
 
