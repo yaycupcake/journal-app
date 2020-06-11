@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 export default function Posts(props) {
+ props.getPostList()
  return (
   <div className="Posts">
 
