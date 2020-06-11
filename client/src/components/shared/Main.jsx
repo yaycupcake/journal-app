@@ -3,11 +3,11 @@ import { Route } from 'react-router-dom'
 import Posts from '../Posts'
 import Post from '../Post'
 import Login from '../Login'
+import NewPost from '../NewPost'
 
 export default function Main(props) {
  return (
   <main>
-   <p>PLACEHOLDER TEXT HERE</p>
    <Route exact path='/'>
     <Posts
      posts={props.posts}
@@ -22,6 +22,9 @@ export default function Main(props) {
     <Login
      handleLoginSubmit={props.handleLoginSubmit}
     />
+   </Route>
+   <Route exact path='/new-post'>
+    <NewPost />
    </Route>
   </main>
  )
