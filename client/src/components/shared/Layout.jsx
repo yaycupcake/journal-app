@@ -5,7 +5,7 @@ import Main from './Main'
 
 export default function Layout(props) {
  return (
-  <div>
+  <div className="Layout">
    <Header />
    <Nav
     currentUser={props.currentUser}

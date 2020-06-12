@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getOnePost } from '../services/posts'
+import { getOnePost, deletePost } from '../services/posts'
 import { withRouter } from 'react-router-dom'
 import { createComment } from '../services/comments'
 import { Link } from 'react-router-dom'
@@ -34,11 +34,20 @@ class Post extends Component {
 
   await createComment(commentData, id)
   this.setState({ comment: "" })
+  this.getPostData()
+ }
+
+ handleDelete = async (e) => {
+  e.preventDefault()
+  //maybe add an alert/warning later idk
+  const { id } = this.props.match.params
+  await deletePost(id)
+  //prob add a redirect home here
  }
 
  render() {
   return (
-   <div>
+   <div className="Post">
 
     {this.state.post
      ?
@@ -48,29 +57,32 @@ class Post extends Component {
 
       <p>{this.state.post.content}</p>
 
-      {/* prob create a nested ternary/guard here to display the edit/delete buttons only if logged in and is the creator of the post */}
-
-
-      {this.props.currentUser.id === this.state.post.user.id
+      {this.props.currentUser && this.props.currentUser.id === this.state.post.user.id
        &&
-       <>
-        <Link to={`/post/${this.props.match.params.id}/edit`}>edit</Link>
-        <Link to='#'>Delete</Link>
-       </>
+       <div class="crud-buttons">
+        <Link to={`/post/${this.props.match.params.id}/edit`}>Edit</Link>
+        <Link to='#' onClick={this.handleDelete}>Delete</Link>
+       </div>
       }
 
       <hr />
       <h3>Comments:</h3>
 
       {this.state.post.comments.map((comment, id) => (
-       <div key={id}>
-        <p>{comment.user.username} says:</p>
-        <p>{comment.content}</p>
+       <div
+        className="Comment"
+        key={id}
+       >
+        <p className="username">{comment.user.username} says:</p>
+        <p className="content">{comment.content}</p>
        </div>
       ))}
 
 
-      <form onSubmit={this.handleSubmit}>
+      <form
+       onSubmit={this.handleSubmit}
+       className="post-comment-form"
+      >
 
        <textarea name="comment" onChange={this.handleChange} value={this.state.comment} />
        <button>Post Comment</button>
@@ -91,6 +103,7 @@ class Post extends Component {
 
      :
      <h2>Sorry, that post was not found.</h2>
+     // not to self, add a link to return home as well here
     }
 
 

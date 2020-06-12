@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-class Login extends Component {
-
+class SignUp extends Component {
  state = {
   username: "",
   password: ""
@@ -16,7 +15,7 @@ class Login extends Component {
 
  handleSubmit = (e) => {
   e.preventDefault()
-  this.props.handleLoginSubmit(this.state)
+  this.props.handleRegisterSubmit(this.state)
   this.setState({
    username: "",
    password: ""
@@ -26,11 +25,11 @@ class Login extends Component {
 
  render() {
   return (
-   <div className="Login">
-    <h2>Login</h2>
+   <div className="SignUp">
+    <h2>Sign Up</h2>
     <form
      onSubmit={this.handleSubmit}
-     className="login-form"
+     className="sign-up-form"
     >
 
      <input
@@ -54,4 +53,4 @@ class Login extends Component {
   )
  }
 }
-export default withRouter(Login)
+export default withRouter(SignUp)

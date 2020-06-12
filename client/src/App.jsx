@@ -3,7 +3,8 @@ import './App.scss'
 import Layout from './components/shared/Layout'
 import { getAllPosts } from './services/posts'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
-export default class App extends Component {
+import { withRouter } from 'react-router-dom'
+class App extends Component {
 
  state = {
   posts: null,
@@ -36,6 +37,7 @@ export default class App extends Component {
   })
   localStorage.clear()
   removeToken()
+  this.props.history.push('/')
  }
 
  handleVerify = async () => {
@@ -59,3 +61,5 @@ export default class App extends Component {
   )
  }
 }
+
+export default withRouter(App)

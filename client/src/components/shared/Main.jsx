@@ -5,11 +5,12 @@ import Post from '../Post'
 import Login from '../Login'
 import NewPost from '../NewPost'
 import EditPost from '../EditPost'
+import SignUp from '../SignUp'
 
 export default function Main(props) {
 
  return (
-  <main>
+  <main className="Main">
    <Route exact path='/'>
     <Posts
      posts={props.posts}
@@ -31,8 +32,15 @@ export default function Main(props) {
      handleLoginSubmit={props.handleLoginSubmit}
     />
    </Route>
+   <Route exact path='/sign-up'>
+    <SignUp
+     handleRegisterSubmit={props.handleRegisterSubmit}
+    />
+   </Route>
    <Route exact path='/new-post'>
-    <NewPost />
+    <NewPost
+     currentUser={props.currentUser}
+    />
    </Route>
   </main>
  )
