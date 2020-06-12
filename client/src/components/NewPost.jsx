@@ -30,7 +30,7 @@ class NewPost extends Component {
 
  render() {
   return (
-   <div>
+   <div className="NewPost">
     <h2>New Post</h2>
     <form onSubmit={this.handleSubmit}>
 

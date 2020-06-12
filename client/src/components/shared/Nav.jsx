@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Nav(props) {
  return (
-  <aside>
+  <aside className="Nav">
    <nav>
     <ul>
      <li>Welcome, {
@@ -13,34 +13,20 @@ export default function Nav(props) {
        :
        'Guest'
      }</li>
-     <li>{
-      props.currentUser
-       ?
-       <Link to='/my-posts'>My Posts</Link>
-       :
-       <Link to='/login'>Login</Link>
-     }</li>
-     <li>{
-      props.currentUser
-       ?
-       <Link to='#' onClick={props.handleLogout}>Logout</Link>
-       // gotta fix this line later to actually logout
-       :
-       <Link to='/sign-up'>Sign Up</Link>
-     }</li>
      {
       props.currentUser
-      &&
-      <li>
-       <Link to='/preferences'>Preferences</Link>
-      </li>
-     }
-     {
-      props.currentUser
-      &&
-      <li>
-       <Link to='/new-post'>New Post</Link>
-      </li>
+       ?
+       <>
+        <li><Link to='/my-posts'>My Posts</Link></li>
+        <li><Link to='#' onClick={props.handleLogout}>Logout</Link></li>
+        <li><Link to='/preferences'>Preferences</Link></li>
+        <li><Link to='/new-post'>New Post</Link></li>
+       </>
+       :
+       <>
+        <li><Link to='/login'>Login</Link></li>
+        <li><Link to='/sign-up'>Sign Up</Link></li>
+       </>
      }
     </ul>
    </nav>

@@ -34,6 +34,7 @@ class Post extends Component {
 
   await createComment(commentData, id)
   this.setState({ comment: "" })
+  this.getPostData()
  }
 
  handleDelete = async (e) => {
@@ -46,7 +47,7 @@ class Post extends Component {
 
  render() {
   return (
-   <div>
+   <div className="Post">
 
     {this.state.post
      ?
@@ -56,25 +57,24 @@ class Post extends Component {
 
       <p>{this.state.post.content}</p>
 
-      {/* prob create a nested ternary/guard here to display the edit/delete buttons only if logged in and is the creator of the post */}
-
-
       {this.props.currentUser.id === this.state.post.user.id
        &&
-       <>
+       <div class="crud-buttons">
         <Link to={`/post/${this.props.match.params.id}/edit`}>Edit</Link>
         <Link to='#' onClick={this.handleDelete}>Delete</Link>
-        {/* NEED TO ACTUALLY IMPLEMENT DELETE FUNCTIONALITY */}
-       </>
+       </div>
       }
 
       <hr />
       <h3>Comments:</h3>
 
       {this.state.post.comments.map((comment, id) => (
-       <div key={id}>
-        <p>{comment.user.username} says:</p>
-        <p>{comment.content}</p>
+       <div
+        className="Comment"
+        key={id}
+       >
+        <p className="username">{comment.user.username} says:</p>
+        <p className="content">{comment.content}</p>
        </div>
       ))}
 

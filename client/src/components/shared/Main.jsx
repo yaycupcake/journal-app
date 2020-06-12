@@ -10,7 +10,7 @@ import SignUp from '../SignUp'
 export default function Main(props) {
 
  return (
-  <main>
+  <main className="Main">
    <Route exact path='/'>
     <Posts
      posts={props.posts}

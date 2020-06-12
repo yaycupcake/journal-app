@@ -5,17 +5,21 @@ export default function Posts(props) {
  const { getPostList } = props
  useEffect(() => {
   getPostList()
- })
+ }, [])
 
  return (
   <div className="Posts">
 
    {props.posts && props.posts.map((post, id) => (
 
-    <Link to={`/post/${post.id}`} key={id}>
-     <div>
+    <Link
+     className='post-link'
+     to={`/post/${post.id}`}
+     key={id}
+    >
+     <div className='post-card'>
 
-      <p>{post.title}</p>
+      <h2>{post.title}</h2>
       <p>by: {post.user.username}</p>
 
      </div>
