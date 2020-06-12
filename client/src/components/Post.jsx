@@ -39,10 +39,9 @@ class Post extends Component {
 
  handleDelete = async (e) => {
   e.preventDefault()
-  //maybe add an alert/warning later idk
   const { id } = this.props.match.params
   await deletePost(id)
-  //prob add a redirect home here
+  this.props.history.push('/')
  }
 
  render() {
