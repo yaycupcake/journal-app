@@ -9,7 +9,7 @@ html {
 }
 
 body {
- // color: hotpink;
+ background-color: #fff;
  color: #333;
  font-size: 18px;
  font-family: sans-serif;
@@ -21,13 +21,24 @@ body {
  justify-content: flex-start;
  align-items: center;
  width: 100%;
- background-color: #eee;
-
+ background-color: #bbb;
+ @media screen and (min-width: 1200px) {
+  display: grid;
+  grid-template-columns: 1fr 50em 20em 1fr;
+  grid-template-rows: 3.5em auto;
+  grid-template-areas:
+   "header header header header"
+   ". main nav .";
+ }
  .Header {
-  background-color: #ddd;
+  background-color: #ccc;
   width: 100%;
   padding: 0.5em 1em;
   text-align: center;
+  height: 3.5em;
+  @media screen and (min-width: 1200px) {
+   grid-area: header;
+  }
   h1 {
    margin: 0;
    a {
@@ -44,7 +55,7 @@ body {
    ul {
     text-align: center;
     padding: 0;
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: 750px) and (max-width: 1199px) {
      display: flex;
      align-items: flex-start;
      justify-content: center;
@@ -59,12 +70,26 @@ body {
     }
    }
   }
+  @media screen and (min-width: 1200px) {
+   grid-area: nav;
+   height: 100%;
+   padding-top: 1em;
+   nav {
+    ul {
+     text-align: left;
+    }
+   }
+  }
  }
 
  .Main {
   background-color: #ddd;
   width: 100%;
   padding: 1em 1em;
+  @media screen and (min-width: 1200px) {
+   grid-area: main;
+   height: 100%;
+  }
 
   .Posts {
    display: flex;

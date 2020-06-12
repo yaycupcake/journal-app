@@ -194,7 +194,7 @@ src
 | Basic CSS           |    L     |     1.5 hrs    |     52m     |     TBD     |
 | Mobile layout       |    M     |     1 hrs      |     1h 18m     |     TBD     |
 | Tablet layout       |    M     |     1 hrs      |     10m     |     TBD     |
-| Desktop layout      |    M     |     1 hrs      |     _ hrs     |     TBD     |
+| Desktop layout      |    M     |     1 hrs      |     20m     |     TBD     |
 | Code cleanup        |    M     |     0.5 hrs    |     1m     |     TBD     |
 | TROUBLESHOOTING     |    H     |     7 hrs      |     1h 32m     |     TBD     |
 | TOTAL               |          |     40 hrs     |     _ hrs     |     TBD     |
