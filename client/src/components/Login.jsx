@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-
-export default class Login extends Component {
+import { withRouter } from 'react-router-dom'
+class Login extends Component {
 
  state = {
   username: "",
@@ -17,11 +17,11 @@ export default class Login extends Component {
  handleSubmit = (e) => {
   e.preventDefault()
   this.props.handleLoginSubmit(this.state)
-  // history.push('/');
   this.setState({
    username: "",
    password: ""
   })
+  this.props.history.push('/');
  }
 
  render() {
@@ -49,3 +49,4 @@ export default class Login extends Component {
   )
  }
 }
+export default withRouter(Login)

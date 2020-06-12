@@ -189,10 +189,10 @@ src
 | Authentication      |    H     |     5 hrs      |     45m     |     TBD     |
 | Connect rails/react |    H     |     4 hrs      |     1h 10m     |     TBD     |
 | Component creation  |    H     |     3 hrs      |     2h 12m     |     TBD     |
-| State and methods   |    H     |     3 hrs      |     2h 52m     |     TBD     |
-| React router        |    M     |     1.5 hrs    |     1h 17m     |     TBD     |
-| Basic CSS           |    L     |     1.5 hrs    |     20m     |     TBD     |
-| Mobile layout       |    M     |     1 hrs      |     50m     |     TBD     |
+| State and methods   |    H     |     3 hrs      |     2h 53m     |     TBD     |
+| React router        |    M     |     1.5 hrs    |     1h 25m     |     TBD     |
+| Basic CSS           |    L     |     1.5 hrs    |     40m     |     TBD     |
+| Mobile layout       |    M     |     1 hrs      |     1h 10m     |     TBD     |
 | Tablet layout       |    M     |     1 hrs      |     _ hrs     |     TBD     |
 | Desktop layout      |    M     |     1 hrs      |     _ hrs     |     TBD     |
 | Code cleanup        |    M     |     0.5 hrs    |     1m     |     TBD     |

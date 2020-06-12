@@ -39,7 +39,6 @@ body {
  .Nav {
   background-color: #ccc;
   width: 100%;
-
   nav {
    ul {
     text-align: center;
@@ -70,7 +69,6 @@ body {
     margin: 1em;
     text-decoration: none;
     color: inherit;
-
     .post-card {
      border: 1px solid black;
      padding: 1em;
@@ -80,19 +78,69 @@ body {
 
   .Post {
    .crud-buttons {
-    margin-bottom: 2em;
+    margin: 2em 0;
     a {
      margin-right: 1em;
+     border: 1px solid black;
+     text-decoration: none;
+     padding: 0.5em;
+     color: inherit;
     }
    }
    .Comment {
-    margin: 1em 0;
+    margin: 2em 0;
     .username {
      font-size: 0.8em;
-     margin: 0 0 0.5em;
+     margin: 0;
     }
     .content {
-     margin: 0.5em 0 0;
+     margin: 0.2em 0 0;
+    }
+   }
+   .post-comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    textarea {
+     height: 5em;
+    }
+    button {
+     padding: 1em;
+    }
+   }
+  }
+  .EditPost {
+   .edit-post-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    input {
+     padding: 0.5em;
+    }
+    textarea {
+     height: 5em;
+    }
+    button {
+     padding: 1em;
+    }
+   }
+  }
+  .NewPost {
+   .new-post-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    input {
+     padding: 0.5em;
+    }
+    textarea {
+     height: 5em;
+    }
+    button {
+     padding: 1em;
     }
    }
   }

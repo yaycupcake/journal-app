@@ -30,27 +30,33 @@ class NewPost extends Component {
 
  render() {
   return (
-   <div className="NewPost">
-    <h2>New Post</h2>
-    <form onSubmit={this.handleSubmit}>
+   this.props.currentUser ?
+    < div className="NewPost" >
+     <h2>New Post</h2>
+     <form
+      onSubmit={this.handleSubmit}
+      className="new-post-form"
+     >
 
-     <input
-      type="text"
-      name="title"
-      onChange={this.handleChange}
-      value={this.state.title}
-     />
-     <textarea
-      name="content"
-      onChange={this.handleChange}
-      value={this.state.content}
-     />
-     <button>Create Post</button>
+      <input
+       type="text"
+       name="title"
+       onChange={this.handleChange}
+       value={this.state.title}
+      />
+      <textarea
+       name="content"
+       onChange={this.handleChange}
+       value={this.state.content}
+      />
+      <button>Create Post</button>
 
-    </form>
+     </form>
 
 
-   </div>
+    </div >
+    :
+    <h2>Please login or sign up first!</h2>
   )
  }
 }

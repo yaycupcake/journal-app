@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 export default function Nav(props) {
  return (
@@ -17,9 +17,9 @@ export default function Nav(props) {
       props.currentUser
        ?
        <>
-        <li><Link to='/my-posts'>My Posts</Link></li>
+        {/* <li><Link to='/my-posts'>My Posts</Link></li> */}
         <li><Link to='#' onClick={props.handleLogout}>Logout</Link></li>
-        <li><Link to='/preferences'>Preferences</Link></li>
+        {/* <li><Link to='/preferences'>Preferences</Link></li> */}
         <li><Link to='/new-post'>New Post</Link></li>
        </>
        :

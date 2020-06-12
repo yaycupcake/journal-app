@@ -38,7 +38,9 @@ export default function Main(props) {
     />
    </Route>
    <Route exact path='/new-post'>
-    <NewPost />
+    <NewPost
+     currentUser={props.currentUser}
+    />
    </Route>
   </main>
  )

@@ -57,7 +57,7 @@ class Post extends Component {
 
       <p>{this.state.post.content}</p>
 
-      {this.props.currentUser.id === this.state.post.user.id
+      {this.props.currentUser && this.props.currentUser.id === this.state.post.user.id
        &&
        <div class="crud-buttons">
         <Link to={`/post/${this.props.match.params.id}/edit`}>Edit</Link>
@@ -79,7 +79,10 @@ class Post extends Component {
       ))}
 
 
-      <form onSubmit={this.handleSubmit}>
+      <form
+       onSubmit={this.handleSubmit}
+       className="post-comment-form"
+      >
 
        <textarea name="comment" onChange={this.handleChange} value={this.state.comment} />
        <button>Post Comment</button>

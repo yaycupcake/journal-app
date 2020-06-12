@@ -44,6 +44,7 @@ class EditPost extends Component {
   console.log(postData);
 
   await updatePost(id, postData)
+  this.props.history.push(`/post/${id}`)
  }
 
  render() {
@@ -52,10 +53,13 @@ class EditPost extends Component {
 
     {this.state.post
      ?
-     this.props.currentUser.id === this.state.post.user.id
+     this.props.currentUser && this.props.currentUser.id === this.state.post.user.id
       ?
       <>
-       <form onSubmit={this.handleSubmit}>
+       <form
+        onSubmit={this.handleSubmit}
+        className="edit-post-form"
+       >
         <input
          type="text"
          name="title"
