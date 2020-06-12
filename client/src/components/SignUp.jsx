@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-
-export default class SignUp extends Component {
- //still have to import and route this into main, note to self
+import { withRouter } from 'react-router-dom'
+class SignUp extends Component {
  state = {
   username: "",
   password: ""
@@ -15,38 +14,43 @@ export default class SignUp extends Component {
  }
 
  handleSubmit = (e) => {
-  //may or may not have to edit this one, not sure yet
   e.preventDefault()
   this.props.handleRegisterSubmit(this.state)
-  // history.push('/');
   this.setState({
    username: "",
    password: ""
   })
+  this.props.history.push('/')
  }
 
  render() {
   return (
    <div className="SignUp">
     <h2>Sign Up</h2>
-    <form onSubmit={this.handleSubmit}>
+    <form
+     onSubmit={this.handleSubmit}
+     className="sign-up-form"
+    >
 
      <input
       type="text"
       name="username"
       value={this.state.username}
       onChange={this.handleChange}
+      placeholder="username"
      />
      <input
       type="password"
       name="password"
       value={this.state.password}
       onChange={this.handleChange}
+      placeholder="password"
      />
-     <button>Sign Up</button>
+     <button>GO</button>
 
     </form>
    </div>
   )
  }
 }
+export default withRouter(SignUp)

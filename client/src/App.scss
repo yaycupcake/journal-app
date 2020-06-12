@@ -9,8 +9,8 @@ html {
 }
 
 body {
- // margin: 1em;
- color: hotpink;
+ // color: hotpink;
+ color: #333;
  font-size: 18px;
  font-family: sans-serif;
 }
@@ -32,22 +32,29 @@ body {
    margin: 0;
    a {
     text-decoration: none;
+    color: inherit;
    }
   }
  }
 
  .Nav {
-  background-color: #ccc;
+  background-color: #eee;
   width: 100%;
   nav {
    ul {
     text-align: center;
     padding: 0;
+    @media screen and (min-width: 750px) {
+     display: flex;
+     align-items: flex-start;
+     justify-content: center;
+    }
     li {
      list-style-type: none;
      padding: 0.2em 1em;
      a {
       text-decoration: none;
+      color: inherit;
      }
     }
    }
@@ -55,7 +62,7 @@ body {
  }
 
  .Main {
-  background-color: #bbb;
+  background-color: #ddd;
   width: 100%;
   padding: 1em 1em;
 
@@ -64,6 +71,16 @@ body {
    flex-direction: column;
    align-items: center;
    justify-content: flex-start;
+   @media screen and (min-width: 750px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: stretch;
+    .post-link {
+     max-width: 45%;
+    }
+   }
    .post-link {
     width: 100%;
     margin: 1em;
@@ -116,6 +133,9 @@ body {
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
+    > * {
+     margin: 1em 0;
+    }
     input {
      padding: 0.5em;
     }
@@ -133,6 +153,49 @@ body {
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
+    > * {
+     margin: 1em 0;
+    }
+    input {
+     padding: 0.5em;
+    }
+    textarea {
+     height: 5em;
+    }
+    button {
+     padding: 1em;
+    }
+   }
+  }
+  .Login {
+   .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    > * {
+     margin: 1em 0;
+    }
+    input {
+     padding: 0.5em;
+    }
+    textarea {
+     height: 5em;
+    }
+    button {
+     padding: 1em;
+    }
+   }
+  }
+  .SignUp {
+   .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    > * {
+     margin: 1em 0;
+    }
     input {
      padding: 0.5em;
     }

@@ -20,7 +20,7 @@ export default function Posts(props) {
      <div className='post-card'>
 
       <h2>{post.title}</h2>
-      <p>by: {post.user.username}</p>
+      <p>By: {post.user.username}</p>
 
      </div>
 

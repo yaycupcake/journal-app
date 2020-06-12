@@ -21,28 +21,33 @@ class Login extends Component {
    username: "",
    password: ""
   })
-  this.props.history.push('/');
+  this.props.history.push('/')
  }
 
  render() {
   return (
    <div className="Login">
     <h2>Login</h2>
-    <form onSubmit={this.handleSubmit}>
+    <form
+     onSubmit={this.handleSubmit}
+     className="login-form"
+    >
 
      <input
       type="text"
       name="username"
       value={this.state.username}
       onChange={this.handleChange}
+      placeholder="username"
      />
      <input
       type="password"
       name="password"
       value={this.state.password}
       onChange={this.handleChange}
+      placeholder="password"
      />
-     <button>Login</button>
+     <button>GO</button>
 
     </form>
    </div>

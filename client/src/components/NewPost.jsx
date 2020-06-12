@@ -49,7 +49,7 @@ class NewPost extends Component {
        onChange={this.handleChange}
        value={this.state.content}
       />
-      <button>Create Post</button>
+      <button>GO</button>
 
      </form>
 

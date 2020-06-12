@@ -56,6 +56,7 @@ class EditPost extends Component {
      this.props.currentUser && this.props.currentUser.id === this.state.post.user.id
       ?
       <>
+       <h2>Edit Post</h2>
        <form
         onSubmit={this.handleSubmit}
         className="edit-post-form"
