@@ -7,28 +7,23 @@
  --secondary-text: #545677;
  --main-text: #011c27;
 }
-
 html {
  box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
  box-sizing: inherit;
 }
-
 body {
  background-color: var(--plain-bg);
  color: var(--main-text);
  font-size: 18px;
  font-family: sans-serif;
 }
-
 a {
  color: var(--accent-text);
 }
-
 .Layout {
  display: flex;
  flex-direction: column;
@@ -62,7 +57,6 @@ a {
    }
   }
  }
-
  .Nav {
   background-color: var(--light-bg-1);
   width: 100%;
@@ -96,7 +90,6 @@ a {
    }
   }
  }
-
  .Main {
   background-color: var(--off-bg);
   width: 100%;
@@ -105,7 +98,6 @@ a {
    grid-area: main;
    height: 100%;
   }
-
   .Posts {
    display: flex;
    flex-direction: column;
@@ -132,7 +124,6 @@ a {
     }
    }
   }
-
   .Post {
    .crud-buttons {
     margin: 2em 0;
