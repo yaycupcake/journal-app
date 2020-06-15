@@ -231,7 +231,15 @@ Expand to view.
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+
+    {this.props.currentUser && this.props.currentUser.id === this.state.post.user.id
+     &&
+     <div class="crud-buttons">
+      <Link to={`/post/${this.props.match.params.id}/edit`}>Edit</Link>
+      <Link to='#' onClick={this.handleDelete}>Delete</Link>
+     </div>
+    }
+
 
 ## Code Issues & Resolutions
 
