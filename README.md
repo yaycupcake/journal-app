@@ -22,6 +22,8 @@
 
 **Journal App** is essentially a blog app, build from scratch. The intention is to make it so eventually, it can be used to publish, search, tag, archive, read, and share any entries. It utilizes a ruby on rails backend and a react frontend.
 
+**[CLICK HERE FOR THE LIVE SITE](https://ycc-journal-app.surge.sh/)**
+
 
 <br>
 
