@@ -8,7 +8,6 @@ class NewPost extends Component {
   content: ''
  }
 
-
  handleChange = (e) => {
   const { name, value } = e.target;
   this.setState({
@@ -26,7 +25,6 @@ class NewPost extends Component {
   this.setState({ content: "" })
   this.props.history.push('/')
  }
-
 
  render() {
   return (
@@ -52,7 +50,6 @@ class NewPost extends Component {
       <button>GO</button>
 
      </form>
-
 
     </div >
     :

@@ -88,21 +88,10 @@ class Post extends Component {
 
       </form>
 
-      {/* change the form to show only if logged in */}
-      {/* also break out this whole comment thing
-      into its own component */}
-
      </>
-
-
-
-
-
-
 
      :
      <h2>Sorry, that post was not found.</h2>
-     // not to self, add a link to return home as well here
     }
 
 

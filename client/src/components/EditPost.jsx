@@ -76,7 +76,7 @@ class EditPost extends Component {
        </form>
       </>
       :
-      <h2>You can't edit someone else's post!</h2>
+      <h2>You can't edit another user's post!</h2>
      // There shouldn't actually be a way to see this error
      // just from navigating the site normally
      // however it is there in case a user types in the URL.
