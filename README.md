@@ -241,6 +241,3 @@ Expand to view.
     }
 
 
-## Code Issues & Resolutions
-
-> Use this section to list of all major issues encountered and their resolution, if you'd like.
